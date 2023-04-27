@@ -5,6 +5,7 @@ import org.example.model.MartianSeat;
 import org.example.model.Seat;
 import org.example.model.Spaceship;
 
+import java.util.List;
 import java.util.Map;
 
 public class Main {
@@ -20,11 +21,10 @@ public class Main {
         sp1.bookSeat(h2);
         sp1.bookSeat(m2);
 
-        var sp2 = new Spaceship(3);
-        sp2.bookSeat(m2);
-        sp2.bookSeat(h1);
-        sp2.bookSeat(h2);
-        sp2.bookSeat(m1);
+        var sp2 = new Spaceship(4);
+        sp2.bookSeat(List.of(m1,h1,h2,h1));
+
+        sp2.removePassenger(List.of(m1,m2,h2));
 
 
         System.out.println("<< sp 1 >>");
