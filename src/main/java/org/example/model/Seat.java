@@ -1,7 +1,6 @@
 package org.example.model;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Objects;
 
 public abstract class Seat {
 
@@ -26,4 +25,9 @@ public abstract class Seat {
     public Integer getID() {
         return ID;
     }
+
+    public Pluto getPluto() {
+        return pluto;
+    }
+
 }

@@ -36,5 +36,7 @@ public class Main {
         for (Map.Entry<Integer,Seat> i: sp2.getSeats().entrySet()){
             System.out.println("key: "+i.getKey()+" "+"value: "+i.getValue().getName());
         }
+
+        System.out.println(m2.equals(m2));
     }
 }
