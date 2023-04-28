@@ -8,7 +8,6 @@ public abstract class Seat {
     protected Integer ID;
     protected String name;
 
-    protected Pluto pluto;
 
     protected Seat(String name) {
         count++;
@@ -26,8 +25,5 @@ public abstract class Seat {
         return ID;
     }
 
-    public Pluto getPluto() {
-        return pluto;
-    }
 
 }

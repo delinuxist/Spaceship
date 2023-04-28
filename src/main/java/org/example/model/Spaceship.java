@@ -52,4 +52,24 @@ public class Spaceship {
             seats.remove(passenger.getID());
         }
     }
+
+    public boolean isBooked(Seat seat) {
+        return seats.containsKey(seat.getID());
+    }
+
+    public Map<Integer,Boolean> isBooked(List<Seat> seats){
+        Map<Integer,Boolean> booked = new HashMap<>();
+        for(Seat s : seats){
+            if(this.seats.containsKey(s.getID())){
+                booked.put(s.getID(),true);
+            } else {
+                booked.put(s.getID(),false);
+            }
+        }
+        return booked;
+    }
+
+    public boolean isFull() {
+        return seats.size() >= capacity;
+    }
 }
